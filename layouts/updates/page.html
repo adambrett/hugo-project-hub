@@ -12,5 +12,7 @@
     <div class="project-hub-prose">
       {{ .Content }}
     </div>
+
+    {{ partial "project-hub/artifacts.html" (dict "page" . "artifacts" .Params.artifacts) }}
   </article>
 {{ end }}

@@ -25,4 +25,6 @@
       <a href="{{ $.RelPermalink }}">Read full update</a>
     </p>
   {{ end }}
+
+  {{ partial "project-hub/artifacts.html" (dict "page" . "artifacts" .Params.artifacts) }}
 </article>

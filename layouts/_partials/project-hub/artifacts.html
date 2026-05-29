@@ -1,0 +1,40 @@
+{{ $page := .page }}
+{{ $artifacts := .artifacts }}
+{{ $pagePath := $page.Path }}
+{{ with $page.File }}
+  {{ $pagePath = .Path }}
+{{ end }}
+
+{{ with $artifacts }}
+  <section class="project-hub-artifacts" aria-label="Artifacts">
+    <ul class="project-hub-artifact-list">
+      {{ range . }}
+        {{ $label := index . "label" }}
+        {{ $url := index . "url" }}
+        {{ $resourcePath := index . "resource" }}
+        {{ $description := index . "description" }}
+        {{ $rel := index . "rel" }}
+
+        <li class="project-hub-artifact">
+          {{ if and $label $url (not $resourcePath) }}
+            <a class="project-hub-artifact-link" href="{{ $url }}"{{ with $rel }} rel="{{ . }}"{{ end }}>{{ $label }}</a>
+          {{ else if and $label $resourcePath (not $url) }}
+            {{ with $page.Resources.Get $resourcePath }}
+              <a class="project-hub-artifact-link" href="{{ .RelPermalink }}">{{ $label }}</a>
+            {{ else }}
+              {{ warnf "Project Hub: update %q cannot resolve artifact resource %q" $pagePath $resourcePath }}
+              <span class="project-hub-artifact-unavailable">{{ $label }} unavailable. Artifact unavailable. This file is not included with the update.</span>
+            {{ end }}
+          {{ else }}
+            {{ warnf "Project Hub: update %q has an invalid artifact; set label plus exactly one of url or resource" $pagePath }}
+            <span class="project-hub-artifact-unavailable">Artifact unavailable. This file is not included with the update.</span>
+          {{ end }}
+
+          {{ with $description }}
+            <p class="project-hub-artifact-description">{{ . }}</p>
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}
