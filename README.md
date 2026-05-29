@@ -72,6 +72,38 @@ External artifacts use `url`. Local artifacts use `resource` and should be
 placed beside the update's `index.md` file. Artifacts render in the order they
 appear in front matter.
 
+## Local Development
+
+Check the local tools required by the theme and example site:
+
+```bash
+make depend
+```
+
+Serve the example project hub locally:
+
+```bash
+make run
+```
+
+Run the strict Hugo build for `example/`:
+
+```bash
+make test
+```
+
+Build production output into `example/public`:
+
+```bash
+make build
+```
+
+Remove generated Hugo output and caches:
+
+```bash
+make clean
+```
+
 ## Requirements
 
 - Hugo Extended `0.162.0` or newer.
