@@ -39,6 +39,9 @@ video {
   --hub-accent-strong: oklch(55% 0.17 145);
   --hub-focus: oklch(50% 0.18 255);
   --hub-page-gutter: clamp(1rem, 4vw, 4rem);
+  --hub-timeline-gutter: clamp(1.25rem, 3vw, 2rem);
+  --hub-rail-width: 0.5rem;
+  --hub-rail-center: calc(var(--hub-rail-width) / 2);
 }
 
 body {
@@ -149,7 +152,7 @@ h3 {
   position: relative;
   display: grid;
   gap: clamp(1.5rem, 4vw, 2.75rem);
-  padding: 0 0 clamp(3rem, 8vw, 5.5rem) clamp(1.25rem, 3vw, 2rem);
+  padding: 0 0 clamp(3rem, 8vw, 5.5rem) var(--hub-timeline-gutter);
 }
 
 .timeline::before {
@@ -157,7 +160,7 @@ h3 {
   top: 0;
   bottom: 0.75rem;
   left: 0;
-  width: 0.5rem;
+  width: var(--hub-rail-width);
   background: var(--hub-rule);
   border-radius: 999px;
   content: "";
@@ -166,7 +169,7 @@ h3 {
 .timeline::after {
   position: absolute;
   bottom: 0;
-  left: 0.25rem;
+  left: var(--hub-rail-center);
   width: 1.3rem;
   height: 1.3rem;
   background: var(--hub-accent);
@@ -184,7 +187,7 @@ h3 {
 .tl-node::before {
   position: absolute;
   top: clamp(1.2rem, 3vw, 1.7rem);
-  left: calc(clamp(1.25rem, 3vw, 2rem) * -1);
+  left: calc((var(--hub-timeline-gutter) * -1) + var(--hub-rail-center));
   z-index: 1;
   width: 1.45rem;
   height: 1.45rem;
@@ -358,6 +361,8 @@ h3 {
 @media (max-width: 42rem) {
   :root {
     --hub-page-gutter: 1.25rem;
+    --hub-timeline-gutter: 1.15rem;
+    --hub-rail-width: 0.36rem;
   }
 
   body {
@@ -379,22 +384,6 @@ h3 {
   .project-hub-page,
   .project-hub-updates-archive {
     box-shadow: 0.4rem 0.4rem 0 var(--hub-rule);
-  }
-
-  .timeline {
-    padding-left: 1.15rem;
-  }
-
-  .timeline::before {
-    width: 0.36rem;
-  }
-
-  .timeline::after {
-    left: 0.18rem;
-  }
-
-  .tl-node::before {
-    left: -1.15rem;
   }
 
   .tl-node article {
