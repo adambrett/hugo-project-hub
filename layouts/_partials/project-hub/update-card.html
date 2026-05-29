@@ -1,30 +1,14 @@
 {{ $dateFormat := site.Params.projectHub.dateFormat | default "2 January 2006" }}
-<article class="project-hub-update">
-  <p class="project-hub-update-date">
-    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-      {{ .Date.Format $dateFormat }}
-    </time>
-  </p>
+<article>
+  <div class="tl-stamp">
+    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format $dateFormat }}</time>
+  </div>
 
-  <h3 class="project-hub-update-title">
-    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-  </h3>
-
-  {{ with .Params.summary }}
-    <p class="project-hub-update-summary">{{ . }}</p>
-  {{ else }}
-    {{ with .Summary }}
-      <div class="project-hub-update-summary">
-        {{ . }}
-      </div>
-    {{ end }}
-  {{ end }}
+  <h3 class="tl-content">{{ .LinkTitle }}</h3>
 
   {{ with .RawContent }}
-    <p class="project-hub-update-more">
-      <a href="{{ $.RelPermalink }}">View update</a>
-    </p>
+    <a href="{{ $.RelPermalink }}">View update</a>
   {{ end }}
 
-  {{ partial "project-hub/artifacts.html" (dict "page" . "artifacts" .Params.artifacts) }}
+  {{ partial "project-hub/artifacts.html" (dict "page" . "artifacts" .Params.artifacts "showDescriptions" false) }}
 </article>

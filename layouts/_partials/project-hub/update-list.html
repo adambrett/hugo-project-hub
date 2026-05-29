@@ -1,8 +1,8 @@
 {{ $updates := where site.RegularPages "Section" "updates" }}
 {{ with $updates }}
-  <ol class="project-hub-timeline">
+  <ol class="timeline">
     {{ range .ByDate.Reverse }}
-      <li class="project-hub-timeline-item">
+      <li class="tl-node">
         {{ partial "project-hub/update-card.html" . }}
       </li>
     {{ end }}

@@ -1,5 +1,6 @@
 {{ $page := .page }}
 {{ $artifacts := .artifacts }}
+{{ $showDescriptions := .showDescriptions | default true }}
 {{ $pagePath := $page.Path }}
 {{ with $page.File }}
   {{ $pagePath = .Path }}
@@ -30,8 +31,10 @@
             <span class="project-hub-artifact-unavailable">Artifact unavailable. This file is not included with the update.</span>
           {{ end }}
 
-          {{ with $description }}
-            <p class="project-hub-artifact-description">{{ . }}</p>
+          {{ if $showDescriptions }}
+            {{ with $description }}
+              <p class="project-hub-artifact-description">{{ . }}</p>
+            {{ end }}
           {{ end }}
         </li>
       {{ end }}
