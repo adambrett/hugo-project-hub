@@ -1,15 +1,19 @@
 {{ define "main" }}
+  {{ $intro := site.Params.projectHub.intro }}
+  {{ $content := .Content }}
   <h1>{{ site.Title }}{{ with site.Params.projectHub.tagline }} {{ . }}{{ end }}</h1>
-  <header>
-    {{ with site.Params.projectHub.intro }}
-      <p>{{ . }}</p>
-    {{ end }}
-    {{ with .Content }}
-      <div>
-        {{ . }}
-      </div>
-    {{ end }}
-  </header>
+  {{ if or $intro $content }}
+    <header>
+      {{ with $intro }}
+        <p>{{ . }}</p>
+      {{ end }}
+      {{ with $content }}
+        <div>
+          {{ . }}
+        </div>
+      {{ end }}
+    </header>
+  {{ end }}
 
   <section aria-label="Project updates">
     {{ partial "project-hub/update-list.html" . }}
