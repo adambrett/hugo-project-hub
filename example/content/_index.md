@@ -1,3 +1,3 @@
 +++
-title = "Ridgeway Redesign Hub"
+title = "Ridgeway Redesign Project Hub"
 +++

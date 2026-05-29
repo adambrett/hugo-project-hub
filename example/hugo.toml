@@ -1,14 +1,14 @@
 baseURL = "http://localhost:1313/"
 disableKinds = ["rss", "taxonomy", "term"]
 locale = "en-GB"
-title = "Ridgeway Redesign Hub"
+title = "Ridgeway Redesign Project Hub"
 
 [module]
   [[module.imports]]
     path = "github.com/adambrett/hugo-project-hub"
 
 [params.projectHub]
-  tagline = "Project Timeline"
+  tagline = ""
   description = "Updates, review links, and handoff notes for a small demo project."
   intro = ""
   dateFormat = "2 January 2006"
