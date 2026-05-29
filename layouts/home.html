@@ -1,0 +1,24 @@
+{{ define "main" }}
+  <header class="project-hub-header">
+    <h1>{{ site.Title }}</h1>
+    {{ with site.Params.projectHub.tagline }}
+      <p class="project-hub-tagline">{{ . }}</p>
+    {{ end }}
+    {{ with site.Params.projectHub.description }}
+      <p class="project-hub-description">{{ . }}</p>
+    {{ end }}
+    {{ with site.Params.projectHub.intro }}
+      <p class="project-hub-intro-copy">{{ . }}</p>
+    {{ end }}
+    {{ with .Content }}
+      <div class="project-hub-intro">
+        {{ . }}
+      </div>
+    {{ end }}
+  </header>
+
+  <section class="project-hub-updates" aria-labelledby="project-hub-updates-heading">
+    <h2 id="project-hub-updates-heading">Project updates</h2>
+    {{ partial "project-hub/update-list.html" . }}
+  </section>
+{{ end }}

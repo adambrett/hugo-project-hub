@@ -1,0 +1,28 @@
+{{ $dateFormat := site.Params.projectHub.dateFormat | default "2 January 2006" }}
+<article class="project-hub-update">
+  <p class="project-hub-update-date">
+    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+      {{ .Date.Format $dateFormat }}
+    </time>
+  </p>
+
+  <h3 class="project-hub-update-title">
+    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+  </h3>
+
+  {{ with .Params.summary }}
+    <p class="project-hub-update-summary">{{ . }}</p>
+  {{ else }}
+    {{ with .Summary }}
+      <div class="project-hub-update-summary">
+        {{ . }}
+      </div>
+    {{ end }}
+  {{ end }}
+
+  {{ with .RawContent }}
+    <p class="project-hub-update-more">
+      <a href="{{ $.RelPermalink }}">Read full update</a>
+    </p>
+  {{ end }}
+</article>

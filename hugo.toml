@@ -4,5 +4,9 @@
     min = "0.162.0"
 
 [params.projectHub]
+  tagline = ""
+  description = ""
+  intro = ""
   dateFormat = "2 January 2006"
+  emptyState = "No project updates have been published yet."
   footer = ""

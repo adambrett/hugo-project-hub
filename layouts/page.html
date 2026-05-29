@@ -1,6 +1,8 @@
 {{ define "main" }}
   <article class="project-hub-page">
     <h1>{{ .Title }}</h1>
-    {{ .Content }}
+    <div class="project-hub-prose">
+      {{ .Content }}
+    </div>
   </article>
 {{ end }}

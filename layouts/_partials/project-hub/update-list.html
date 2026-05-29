@@ -1,0 +1,15 @@
+{{ $updates := where site.RegularPages "Section" "updates" }}
+{{ with $updates }}
+  <ol class="project-hub-timeline">
+    {{ range .ByDate.Reverse }}
+      <li class="project-hub-timeline-item">
+        {{ partial "project-hub/update-card.html" . }}
+      </li>
+    {{ end }}
+  </ol>
+{{ else }}
+  <div class="project-hub-empty" role="status">
+    <h3>No project updates yet</h3>
+    <p>{{ site.Params.projectHub.emptyState | default "No project updates have been published yet." }}</p>
+  </div>
+{{ end }}

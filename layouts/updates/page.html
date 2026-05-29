@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <article class="project-hub-update-detail">
+    <header class="project-hub-update-detail-header">
+      <p class="project-hub-update-date">
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+          {{ .Date.Format (site.Params.projectHub.dateFormat | default "2 January 2006") }}
+        </time>
+      </p>
+      <h1>{{ .Title }}</h1>
+    </header>
+
+    <div class="project-hub-prose">
+      {{ .Content }}
+    </div>
+  </article>
+{{ end }}
