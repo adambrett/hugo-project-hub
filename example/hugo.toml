@@ -8,9 +8,9 @@ title = "Ridgeway Redesign Hub"
     path = "github.com/adambrett/hugo-project-hub"
 
 [params.projectHub]
-  tagline = "A fictional product redesign timeline."
+  tagline = "Project Timeline"
   description = "Updates, review links, and handoff notes for a small demo project."
-  intro = "A compact project hub for the Ridgeway redesign: decisions, review links, and handoff notes in one place."
+  intro = ""
   dateFormat = "2 January 2006"
   emptyState = "No project updates have been published yet."
   footer = "Ridgeway is a fictional project used to demonstrate Hugo Project Hub."

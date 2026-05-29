@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+    {{ with site.Params.projectHub.description }}
+      <meta name="description" content="{{ . }}">
+    {{ end }}
     {{ with resources.Get "css/project-hub.css" }}
       <link rel="stylesheet" href="{{ .RelPermalink }}">
     {{ end }}
