@@ -10,7 +10,7 @@ description = "Local handoff notes for labels, helper text, and confirmation cop
 
 [[artifacts]]
 label = "Asset checklist"
-url = "https://assets.ridgeway-redesign.test/checklist"
+url = "https://example.com/checklist"
 description = "Fictional checklist for icons, illustrations, and empty states."
 rel = "noopener"
 +++

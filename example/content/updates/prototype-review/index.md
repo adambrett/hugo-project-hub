@@ -5,7 +5,7 @@ summary = "A clickable review flow is ready, with the summary panel and confirma
 
 [[artifacts]]
 label = "Clickable prototype"
-url = "https://prototype.ridgeway-redesign.test/review"
+url = "https://example.com/review"
 description = "Safe fictional prototype URL for the first review build."
 rel = "noopener"
 

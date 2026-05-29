@@ -58,7 +58,7 @@ only optional artifact fields.
 ```toml
 [[artifacts]]
 label = "Prototype"
-url = "https://project.test/prototype"
+url = "https://example.com/prototype"
 description = "Latest clickable prototype."
 rel = "noopener"
 

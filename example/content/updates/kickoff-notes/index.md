@@ -10,7 +10,7 @@ description = "Local notes from the kickoff and stakeholder interview synthesis.
 
 [[artifacts]]
 label = "Project board"
-url = "https://ridgeway-redesign.test/board"
+url = "https://example.com/board"
 description = "Fictional board collecting early discovery tasks and owners."
 rel = "noopener"
 +++

@@ -9,7 +9,7 @@ summary = ""
 #
 # [[artifacts]]
 # label = "Prototype"
-# url = "https://project.test/prototype"
+# url = "https://example.com/prototype"
 # description = "Optional short context for the link."
 # rel = "noopener"
 #

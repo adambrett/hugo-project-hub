@@ -10,7 +10,7 @@ description = "Local checklist for the final release review."
 
 [[artifacts]]
 label = "Final review"
-url = "https://review.ridgeway-redesign.test/final"
+url = "https://example.com/final"
 description = "Fictional final review URL for stakeholders."
 rel = "noopener"
 +++
