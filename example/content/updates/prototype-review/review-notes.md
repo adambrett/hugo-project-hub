@@ -1,0 +1,13 @@
+# Prototype Review Notes
+
+## Keep
+
+- Persistent trip summary.
+- Fewer competing buttons in the room selection step.
+- Confirmation page grouped by customer decision.
+
+## Revise
+
+- Make editable sections visually distinct.
+- Shorten repeated destination labels on mobile.
+- Add explicit copy for the cancellation window.

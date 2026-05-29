@@ -1,0 +1,7 @@
+# Launch Checklist
+
+- Keyboard focus order follows the visible review flow.
+- Trip summary remains readable at 320px wide.
+- Confirmation copy matches the approved support policy.
+- External review links are finalised for stakeholder sign-off.
+- Post-launch metrics review is scheduled for the following week.

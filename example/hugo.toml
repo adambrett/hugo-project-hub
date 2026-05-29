@@ -1,0 +1,16 @@
+baseURL = "http://localhost:1313/"
+disableKinds = ["taxonomy", "term"]
+locale = "en-GB"
+title = "Ridgeway Redesign Hub"
+
+[module]
+  [[module.imports]]
+    path = "github.com/adambrett/hugo-project-hub"
+
+[params.projectHub]
+  tagline = "A fictional product redesign timeline."
+  description = "Updates, review links, and handoff notes for a small demo project."
+  intro = "A compact project hub for the Ridgeway redesign: decisions, review links, and handoff notes in one place."
+  dateFormat = "2 January 2006"
+  emptyState = "No project updates have been published yet."
+  footer = "Ridgeway is a fictional project used to demonstrate Hugo Project Hub."
