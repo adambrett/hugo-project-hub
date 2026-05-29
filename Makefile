@@ -12,7 +12,8 @@ endif
 
 # Variables
 EXAMPLE_DIR      := example
-HUGO_BASEURL    ?= http://localhost:1313/
+HUGO_PORT       ?= 1313
+HUGO_BASEURL    ?= http://localhost:${HUGO_PORT}/
 HUGO_CACHEDIR   ?= ${CURDIR}/.hugo_cache
 # Hugo Extended 0.162.0 or newer is required.
 HUGO_MIN_VERSION := 0.162.0
@@ -45,7 +46,7 @@ depend: ## Verify required local tooling
 
 .PHONY: run
 run: ## Serve the example site locally
-	cd ${EXAMPLE_DIR} && $(HUGO) server --baseURL ${HUGO_BASEURL} --cacheDir ${HUGO_CACHEDIR} --disableFastRender
+	cd ${EXAMPLE_DIR} && $(HUGO) server --baseURL ${HUGO_BASEURL} --port ${HUGO_PORT} --cacheDir ${HUGO_CACHEDIR} --disableFastRender
 
 # Testing
 .PHONY: test

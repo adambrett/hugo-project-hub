@@ -1,5 +1,5 @@
 baseURL = "http://localhost:1313/"
-disableKinds = ["taxonomy", "term"]
+disableKinds = ["rss", "taxonomy", "term"]
 locale = "en-GB"
 title = "Ridgeway Redesign Hub"
 

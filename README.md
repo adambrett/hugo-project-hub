@@ -86,6 +86,12 @@ Serve the example project hub locally:
 make run
 ```
 
+The server uses port `1313` by default. If that port is busy, set `HUGO_PORT`:
+
+```bash
+HUGO_PORT=1323 make run
+```
+
 Run the strict Hugo build for `example/`:
 
 ```bash

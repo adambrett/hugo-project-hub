@@ -1,0 +1,15 @@
+Copy Handoff
+
+Area: Room selection
+Copy: Choose this room
+
+Area: Trip summary
+Copy: Your current trip plan
+
+Area: Change window
+Copy: Free changes until 48 hours before departure
+
+Area: Confirmation
+Copy: Review and confirm booking
+
+Use sentence case for interface labels and keep helper text under two lines on mobile.

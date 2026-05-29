@@ -5,7 +5,7 @@ summary = "The launch checklist is approved after final accessibility and conten
 
 [[artifacts]]
 label = "Launch checklist"
-resource = "launch-checklist.md"
+resource = "launch-checklist.txt"
 description = "Local checklist for the final release review."
 
 [[artifacts]]

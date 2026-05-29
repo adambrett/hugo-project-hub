@@ -5,7 +5,7 @@ summary = "The team agreed the redesign should make trip planning feel calmer, f
 
 [[artifacts]]
 label = "Discovery notes"
-resource = "discovery-notes.md"
+resource = "discovery-notes.txt"
 description = "Local notes from the kickoff and stakeholder interview synthesis."
 
 [[artifacts]]

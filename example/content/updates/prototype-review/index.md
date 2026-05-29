@@ -11,7 +11,7 @@ rel = "noopener"
 
 [[artifacts]]
 label = "Review notes"
-resource = "review-notes.md"
+resource = "review-notes.txt"
 description = "Local review notes captured after the walkthrough."
 +++
 

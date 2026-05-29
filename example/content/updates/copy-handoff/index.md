@@ -5,7 +5,7 @@ summary = "The revised confirmation copy and supporting content are ready for im
 
 [[artifacts]]
 label = "Copy handoff"
-resource = "copy-handoff.md"
+resource = "copy-handoff.txt"
 description = "Local handoff notes for labels, helper text, and confirmation copy."
 
 [[artifacts]]

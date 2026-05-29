@@ -1,4 +1,4 @@
-# Discovery Notes
+Discovery Notes
 
 - Customers compared departure times and room options before looking at price.
 - Stakeholders wanted fewer hidden assumptions in the booking summary.
