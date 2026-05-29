@@ -35,6 +35,43 @@ Project Hub options live under the `[params.projectHub]` namespace:
 `dateFormat` is the Hugo date layout used by project hub templates when showing
 project dates. `footer` is optional footer text for the generated hub.
 
+## Update Content Model
+
+Project updates live in `content/updates/<slug>/index.md` leaf bundles. The
+leaf bundle keeps longer update notes and any local files together.
+
+Each update needs `title` and `date`. `summary` is optional, and normal Markdown
+body content can be used for longer notes:
+
+```toml
++++
+title = "Prototype review"
+date = "2026-05-29T10:00:00+01:00"
+summary = "The prototype is ready for review."
++++
+```
+
+Artifacts use one front matter array named `artifacts`. Each artifact has a
+`label` and exactly one of `url` or `resource`. `description` and `rel` are the
+only optional artifact fields.
+
+```toml
+[[artifacts]]
+label = "Prototype"
+url = "https://project.test/prototype"
+description = "Latest clickable prototype."
+rel = "noopener"
+
+[[artifacts]]
+label = "Brief"
+resource = "brief.pdf"
+description = "Project brief stored beside this update."
+```
+
+External artifacts use `url`. Local artifacts use `resource` and should be
+placed beside the update's `index.md` file. Artifacts render in the order they
+appear in front matter.
+
 ## Requirements
 
 - Hugo Extended `0.162.0` or newer.
