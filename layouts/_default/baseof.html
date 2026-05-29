@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="{{ site.Language.LanguageCode | default "en" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+    {{ with resources.Get "css/project-hub.css" }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ end }}
+    {{ block "head" . }}{{ end }}
+  </head>
+  <body class="project-hub">
+    <main class="project-hub-main">
+      {{ block "main" . }}{{ end }}
+    </main>
+  </body>
+</html>

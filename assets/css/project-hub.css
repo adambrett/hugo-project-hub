@@ -1,0 +1,55 @@
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  color: #1d242d;
+  background: #fbfbfa;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: #064f8f;
+}
+
+a:focus-visible {
+  outline: 3px solid #c28a21;
+  outline-offset: 0.2rem;
+}
+
+.project-hub {
+  min-height: 100vh;
+}
+
+.project-hub-main {
+  width: min(100% - 2rem, 64rem);
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.project-hub-home,
+.project-hub-page {
+  max-width: 42rem;
+}
+
+.project-hub-home h1,
+.project-hub-page h1 {
+  margin: 0 0 1rem;
+  color: #15191f;
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+@media (max-width: 40rem) {
+  .project-hub-home h1,
+  .project-hub-page h1 {
+    font-size: 2rem;
+  }
+}
+
+.project-hub-home :last-child,
+.project-hub-page :last-child {
+  margin-bottom: 0;
+}
