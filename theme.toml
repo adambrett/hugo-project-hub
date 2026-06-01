@@ -1,0 +1,14 @@
+name = "Hugo Project Hub"
+license = "BSD-3-Clause"
+licenselink = "https://github.com/adambrett/hugo-project-hub/blob/main/LICENSE"
+description = "A reusable Hugo Module theme for publishing project hubs: stable project timelines with updates, notes, and links in one place."
+homepage = "https://github.com/adambrett/hugo-project-hub"
+demosite = "https://hugo-project-hub.adbr.dev"
+min_version = "0.162.0"
+
+tags = ["project hub", "portfolio", "timeline", "updates", "minimal", "dark mode", "responsive"]
+features = ["dark mode", "responsive", "hugo modules"]
+
+[author]
+  name = "Adam Brett"
+  homepage = "https://github.com/adambrett/hugo-project-hub"

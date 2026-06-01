@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 430" width="430" height="430" role="img" aria-label="Project Hub">
+  <rect x="20" y="20" width="400" height="400" rx="8" fill="#bfc5cc"/>
+  <rect x="10" y="10" width="400" height="400" rx="8" fill="#181c22" stroke="#bfc5cc" stroke-width="3"/>
+  <rect x="46" y="116" width="88" height="11" fill="#75d87a"/>
+  <text x="44" y="217" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="78" font-weight="800" fill="#e3e8ef">Project</text>
+  <text x="44" y="287" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="78" font-weight="800" fill="#e3e8ef">Hub</text>
+</svg>

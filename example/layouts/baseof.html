@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale | default "en" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+    {{ with site.Params.projectHub.description }}
+      <meta name="description" content="{{ . }}">
+    {{ end }}
+    {{ with resources.Get "css/project-hub.css" }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ end }}
+    <style>
+      .site-footer {
+        width: min(100%, 88rem);
+        padding: 0 var(--hub-page-gutter) clamp(2rem, 6vw, 4rem);
+        color: var(--hub-muted);
+        font-size: 1rem;
+        text-align: right;
+      }
+    </style>
+    {{ block "head" . }}{{ end }}
+  </head>
+  <body class="project-hub">
+    <main class="project-hub-main">
+      {{ block "main" . }}{{ end }}
+    </main>
+    <footer class="site-footer">
+      <small>
+        BSD-3-Clause licensed. Source on
+        <a href="https://github.com/adambrett/hugo-project-hub">GitHub</a>.
+        <a href="https://adbr.me">Author</a>.
+      </small>
+    </footer>
+  </body>
+</html>

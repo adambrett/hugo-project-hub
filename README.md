@@ -1,12 +1,30 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/logo-dark.png">
+    <img alt="Project Hub" src="docs/logo.png" width="200">
+  </picture>
+</p>
+
 # Hugo Project Hub
 
-Hugo Project Hub is a reusable Hugo Module theme for publishing simple project
-hubs: stable project timelines with updates, notes, and links in one browser
-location.
+Hugo Project Hub is a reusable Hugo Module theme for publishing simple [project
+hubs](https://24ways.org/2013/project-hubs/): stable project timelines with
+updates, notes, and links in one browser location.
 
 The theme is meant to be imported by a real Hugo site. Each project owns its
 own content and configuration while this module provides the shared project hub
 defaults and presentation layer.
+
+## Preview
+
+See it running at the [live demo](https://hugo-project-hub.adbr.dev).
+
+The theme ships light and dark palettes and follows the reader's
+`prefers-color-scheme` automatically.
+
+| Light | Dark |
+| --- | --- |
+| ![Project hub in light mode](docs/preview-light.png) | ![Project hub in dark mode](docs/preview-dark.png) |
 
 ## Installation
 
@@ -18,7 +36,7 @@ In the consuming site's `hugo.toml`, import the module by its public path:
     path = "github.com/adambrett/hugo-project-hub"
 ```
 
-This keeps the hub site independent from the theme repository. The consuming
+This keeps the hub site independent of the theme repository. The consuming
 site uses Hugo Modules instead of cloning a starter site or adding a nested
 `themes/` directory.
 
@@ -115,3 +133,7 @@ make clean
 - Hugo Extended `0.162.0` or newer.
 - Go for Hugo Module resolution.
 - Git for fetching module dependencies.
+
+## License
+
+Released under the [BSD 3-Clause License](LICENSE).

@@ -38,6 +38,8 @@ video {
   --hub-accent: oklch(76% 0.17 145);
   --hub-accent-strong: oklch(55% 0.17 145);
   --hub-focus: oklch(50% 0.18 255);
+  --hub-grid-line: oklch(88% 0.018 155 / 0.35);
+  --hub-grid-line-soft: oklch(88% 0.018 155 / 0.28);
   --hub-page-gutter: clamp(1rem, 4vw, 4rem);
   --hub-timeline-gutter: clamp(1.25rem, 3vw, 2rem);
   --hub-rail-width: 0.5rem;
@@ -47,14 +49,33 @@ video {
 body {
   min-height: 100%;
   background:
-    linear-gradient(90deg, oklch(88% 0.018 155 / 0.35) 1px, transparent 1px),
-    linear-gradient(180deg, oklch(88% 0.018 155 / 0.28) 1px, transparent 1px),
+    linear-gradient(90deg, var(--hub-grid-line) 1px, transparent 1px),
+    linear-gradient(180deg, var(--hub-grid-line-soft) 1px, transparent 1px),
     var(--hub-bg);
   background-size: 4rem 4rem;
   color: var(--hub-ink);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.0625rem;
   line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  :root {
+    --hub-bg: oklch(17.5% 0.012 255);
+    --hub-paper: oklch(22.5% 0.013 255);
+    --hub-ink: oklch(93% 0.01 255);
+    --hub-muted: oklch(70% 0.015 255);
+    --hub-rule: oklch(82% 0.012 255);
+    --hub-accent: oklch(80% 0.16 145);
+    --hub-accent-strong: oklch(87% 0.15 145);
+    --hub-focus: oklch(72% 0.15 255);
+    --hub-grid-line: oklch(70% 0.012 255 / 0.1);
+    --hub-grid-line-soft: oklch(70% 0.012 255 / 0.08);
+  }
 }
 
 a {
